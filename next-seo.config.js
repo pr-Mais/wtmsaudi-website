@@ -5,7 +5,7 @@ export default {
             site_name: 'WTM Saudi',
             images: [
                   {
-                        url: 'https://images.pexels.com/photos/10243822/pexels-photo-10243822.jpeg?cs=srgb&dl=pexels-диана-дунаева-10243822.jpg',
+                        url: 'https://github.com/WTMSaudi/website/blob/main/default-seo-image.png?raw=true',
                         width: 800,
                         height: 600,
                         alt: 'WTM Saudi Header Image',
