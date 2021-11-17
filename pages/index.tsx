@@ -23,7 +23,6 @@ const Home: NextPage = ({lngDict, locale}:Params) => {
       <Head>
         <title>{lngDict.name.title}</title>
         <meta name="description" content={lngDict.name.desc} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
