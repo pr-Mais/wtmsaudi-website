@@ -21,7 +21,7 @@ const Home: NextPage = ({lngDict, locale}:Params) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{lngDict.name.title}</title>
+        <title>{lngDict.name.title} | {lngDict.name.sub}</title>
         <meta name="description" content={lngDict.name.desc} />
       </Head>
 
