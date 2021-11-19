@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Dubai';
+  src: local('Dubai'), url(./fonts/Dubai-Regular.ttf) format('ttf');
+}
