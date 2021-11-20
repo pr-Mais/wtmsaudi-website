@@ -1,34 +1,33 @@
 import { Params } from 'next/dist/server/router';
 import Image from 'next/image';
+import Link from 'next/link';
+
+const NavbarItem = ({ label }: Params) => {
+  return (
+    <div className="ml-14 hover:text-blue text-gray-500">
+      <a href="/" rel="noopener noreferrer">
+        <div>{label}</div>
+      </a>
+    </div>
+  );
+};
 
 const Navbar = ({ ...pageProps }: Params) => {
   return (
     <div className="relative bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:space-x-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6">
           <div className="flex justify-start lg:flex-1">
             <div className="flex">
-              <div className="ml-14 hover:text-blue">
-                <a href="/" rel="noopener noreferrer">
-                  <div>المدونة</div>
-                </a>
-              </div>
-              <div className="ml-14 hover:text-blue">
-                <a href="/" rel="noopener noreferrer">
-                  <div>عنا</div>
-                </a>
-              </div>
-              <div className="ml-14 hover:text-blue">
-                <a href="/" rel="noopener noreferrer">
-                  <div>يوم المرأة العالمي</div>
-                </a>
-              </div>
+              <NavbarItem label={'من نحن'}></NavbarItem>
+              <NavbarItem label={'المدونة'}></NavbarItem>
+              <NavbarItem label={'تواصل معنا'}></NavbarItem>
             </div>
           </div>
           <div className="flex justify-end lg:flex-1">
-            <a href="/" rel="noopener noreferrer">
+            <Link href="/">
               <Image src="/logo.svg" alt="WTMSaudi Logo" width={200} height={50} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

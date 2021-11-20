@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
-import { Params } from 'next/dist/server/router';
-import Head from 'next/head';
 import { GetStaticProps } from 'next';
+import { Params } from 'next/dist/server/router';
+
+import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
 
 const Home: NextPage = ({ lngDict }: Params) => {
