@@ -20,7 +20,6 @@ const Footer = ({ ...pageProps }: Params) => {
             <div className="text-white font-thin pb-2">كن راعياً لنا</div>
           </div>
           <div>
-            {' '}
             <Link href="/">
               <Image src="/logo-white.svg" alt="WTMSaudi Logo White" width="300" height="50" />
             </Link>

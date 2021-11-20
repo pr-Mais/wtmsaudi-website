@@ -5,9 +5,11 @@ import Link from 'next/link';
 const NavbarItem = ({ label }: Params) => {
   return (
     <div className="ml-14 hover:text-blue text-gray-500">
-      <a href="/" rel="noopener noreferrer">
-        <div>{label}</div>
-      </a>
+      <Link href="/">
+        <a rel="noopener noreferrer">
+          <div>{label}</div>
+        </a>
+      </Link>
     </div>
   );
 };
