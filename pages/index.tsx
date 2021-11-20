@@ -1,32 +1,26 @@
-import type { NextPage } from 'next';
-import { GetStaticProps } from 'next';
-import { Params } from 'next/dist/server/router';
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import "tailwindcss/tailwind.css";
+import { Container } from "../components/common/container";
+import { NextSeo } from "next-seo";
 
-import Head from 'next/head';
-import 'tailwindcss/tailwind.css';
-
-const Home: NextPage = ({ lngDict }: Params) => {
-  const arrow = <span dangerouslySetInnerHTML={{ __html: lngDict.arrow }}></span>;
-
+const Home = () => {
+  const { t } = useTranslation();
   return (
     <div>
-      <Head>
-        <title>
-          {lngDict.name.title} | {lngDict.name.sub}
-        </title>
-        <meta name="description" content={lngDict.name.desc} />
-      </Head>
+      <NextSeo title="Home Page" />
+      <div>{t("layout:title")}</div>
+
+      <Container></Container>
     </div>
   );
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const language = await import(`../locales/${locale}.json`);
-
   return {
     props: {
-      lngDict: language.default,
-      locale,
+      ...(await serverSideTranslations(String(locale), ["layout"])),
     },
   };
 };
