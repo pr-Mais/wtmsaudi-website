@@ -1,3 +1,22 @@
 {
-  "title": "WTM"
+  "title": "Women Techmakers Saudi",
+  "navbar": {
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "google-groups": {
+      "title": "Google Developers Communities",
+      "gcdc": "Google Cloud Developers Community in Saudi",
+      "gde": "Google Developer Experts",
+      "gdsc": "Google Developer Student Clubs"
+    },
+    "resources": {
+      "title": "Useful resources",
+      "cfs": "Call for speakers",
+      "sponsor": "Be a sponsoer",
+      "submit-blog": "Submit a blog"
+    }
+  }
 }

@@ -1,10 +1,10 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 import Layout from '../components/layout';
-import 'tailwindcss/tailwind.css';
 import { appWithTranslation, useTranslation } from 'next-i18next';
 import { Fragment } from 'react';
 import { DefaultSeo } from 'next-seo';
+
+import 'tailwindcss/tailwind.css';
 
 function WTMWebsite({ Component, pageProps, router }: AppProps) {
   const { t } = useTranslation();
@@ -13,12 +13,12 @@ function WTMWebsite({ Component, pageProps, router }: AppProps) {
       <Layout>
         <DefaultSeo
           description=""
-          title={t('layout:title')}
+          title={t('seo:home')}
           titleTemplate={`%s | ${t('layout:title')}`}
           canonical={process.env.NEXT_PUBLIC_BASE_URL + router.asPath}
           twitter={{
             cardType: 'summary',
-            site: '@WTM',
+            site: '@wtmsaudi.com',
             handle: 'WTMSaudi',
           }}
           openGraph={{

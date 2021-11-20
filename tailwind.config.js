@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         dubai: ["Dubai", "Helvetica", "Arial", "sans-serif"],
+        googlesans: ["GoogleSans", "Helvetica", "Arial", "sans-serif"]
       },
       colors: {
         blue: {
@@ -34,6 +35,7 @@ module.exports = {
       letterSpacing: ["direction"],
       scale: ["direction"],
       fontFamily: ["direction"],
+      textDecoration: ["active"]
     },
   },
   plugins: [require("tailwindcss-dir")()],

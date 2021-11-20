@@ -1,18 +1,20 @@
 import { GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import 'tailwindcss/tailwind.css';
+
 import { Container } from '../components/common/container';
-import { NextSeo } from 'next-seo';
+
+import 'tailwindcss/tailwind.css';
 
 const Home = () => {
   const { t } = useTranslation();
+
   return (
     <div>
-      <NextSeo title="Home Page" />
-
-      <div>{t('layout:title')}</div>
-
+      {/* Page Title */}
+      <NextSeo title={t('seo:home')} />
+      {/* Page Body */}
       <Container></Container>
     </div>
   );
@@ -21,7 +23,7 @@ const Home = () => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(String(locale), ['layout'])),
+      ...(await serverSideTranslations(String(locale), ['seo', 'common', 'layout'])),
     },
   };
 };

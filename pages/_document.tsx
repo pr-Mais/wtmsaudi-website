@@ -28,7 +28,7 @@ export default class NextDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
           <link rel="manifest" href="/favicon/site.webmanifest" />
         </Head>
-        <body dir={dir} className="rtl:font-dubai">
+        <body dir={dir} className="rtl:font-dubai ltr: font-googlesans">
           <Main />
           <NextScript />
         </body>

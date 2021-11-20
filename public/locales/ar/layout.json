@@ -1,3 +1,22 @@
 {
-  "title": "WTM AR"
+  "title": "النساء الرائدات في التقنية",
+  "navbar": {
+    "blog": "المدونة",
+    "about": "عنا",
+    "contact": "تواصل معنا"
+  },
+  "footer": {
+    "google-groups": {
+      "title": "مجتمعات مطوري Google",
+      "gcdc": "مجتمع مطوري Google السحابي السعودي",
+      "gde": "خبراء مطوري Google",
+      "gdsc": "أندية Google للطلبة المطورين"
+    },
+    "resources": {
+      "title": "مصادر مفيدة",
+      "cfs": "كوني متحدثة معنا",
+      "sponsor": "كن راعياً لنا",
+      "submit-blog": "تقديم تدوينة"
+    }
+  }
 }
