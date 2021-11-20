@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Dubai';
-  src: local('Dubai'), url(./fonts/Dubai-Regular.ttf) format('ttf');
+  font-family: "Dubai";
+  src: url(/fonts/Dubai-Regular.ttf) format("ttf");
+  font-display: swap;
 }
