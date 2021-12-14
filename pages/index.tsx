@@ -5,7 +5,6 @@ import { useTranslation } from 'next-i18next';
 
 import { Container } from '../components/common/container';
 
-import 'tailwindcss/tailwind.css';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -15,10 +14,38 @@ const Home = () => {
       {/* Page Title */}
       <NextSeo title={t('seo:home')} />
       {/* Page Body */}
-      <Container></Container>
+      {/* <Alert /> */}
+      <Greating />
+      <Container>
+      </Container>
     </div>
   );
 };
+
+const Greating = () => {
+  const { t } = useTranslation();
+
+  return (
+    //temp to test scroll 
+    <div className="bg-blue-50 h-screen w-full ">
+      <div className="container mx-auto px-2">
+        <h1> {t('layout:title')}</h1>
+      </div>
+    </div>
+  );
+};
+
+const Alert = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="bg-gray-800 h-10 w-full ">
+      <div className="container mx-auto px-2">
+        <p></p>
+      </div>
+    </div>
+  );
+}
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
